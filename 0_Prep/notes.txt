@@ -1,0 +1,19 @@
+
+Ruby documentation: https://ruby-doc.org/core-2.6/String.html
+
+Ruby gems: http://rubygems.org/
+- installing gems: "$ gem install <gem-name>"
+
+Ruby terminal interface:
+- type "irb"
+- write snippets of code
+- good for testing
+
+Running .rb files in terminal:
+- "$ ruby <file-name>"
+
+Debugging with Pry:
+- "$ gem install pry"
+- At the top of the code file, insert: require "pry"
+- declare binding.pry where you want your program to stop for inspection
+- When done, resume execution with ctrl + D

@@ -1,0 +1,43 @@
+## Common Hash Methods
+
+#1 The .key? method allows us to check if a hash contains a specific key.
+
+hash = {name: "Bob", age: 62, height: "5'2"}
+hash.key?("weight")
+=> false
+
+#2 The .select method allows us to pass a block and will return ay key-value pairs
+  that evaluate true when passed to the block.
+
+hash.select { |key, value| key == age}
+=> {age: 62}
+
+#3 The .fetch method allows us to pass a given key and it will return a the value
+  for that key (if it exists). We can also specify an option for return if key not present.
+
+hash.fetch(:height)
+=> "5'2"
+hash.fetch(:eye_color, "eye_color key doesn't exist")
+=> "eye_color key doesn't exist"
+
+#4 The .to_a method returns an array version of our hash when called. Doesn't mutate.
+
+hash.to_a
+=> [[:name, "Bob"], [:age, 62], [:height, "5'2"]]
+
+#5 To retrieve all keys and values from a hash:
+
+hash.keys
+=> [:name, :age, :height]
+hash.values
+=> ["Bob", 62, "5'2"]
+
+#6 Notice that the returned values are in array format. Because it's returning an array, 
+  you can do interesting things like printing out all the keys in a hash:
+  
+hash.keys.each { |k| puts k }.
+=>
+name
+age
+height
+
